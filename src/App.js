@@ -1,6 +1,7 @@
-import CostItem from './components/CostItem';
+//import React from 'react';
+import Costs from './components/Costs/Costs';
 
-function App() {
+const App = () => {
     const costs = [
         {
             date: new Date(2021, 2, 12),
@@ -18,26 +19,21 @@ function App() {
             amount: 499.99,
         },
     ];
+
+    // Old version React JSX
+    // return React.createElement(
+    //     'div',
+    //     {},
+    //     React.createElement('h1', {}, 'App'),
+    //     React.createElement(Costs, { costs: costs })
+    // );
+
     return (
         <div>
             <h1>App</h1>
-            <CostItem
-                date={costs[0].date}
-                description={costs[0].description}
-                amount={costs[0].amount}
-            />
-            <CostItem
-                date={costs[1].date}
-                description={costs[1].description}
-                amount={costs[1].amount}
-            />
-            <CostItem
-                date={costs[2].date}
-                description={costs[2].description}
-                amount={costs[2].amount}
-            />
+            <Costs costs={costs} />
         </div>
     );
-}
+};
 
 export default App;

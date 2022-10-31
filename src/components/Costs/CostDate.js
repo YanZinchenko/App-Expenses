@@ -1,6 +1,6 @@
 import './CostDate.css';
 
-function CostDate(props) {
+const CostDate = (props) => {
     const year = props.date.getFullYear();
     const month = props.date.toLocaleString('uk-UK', { month: 'long' });
     const day = props.date.toLocaleString('uk-UK', { day: '2-digit' });
@@ -12,6 +12,6 @@ function CostDate(props) {
             <div className='cost-date__day'>{day}</div>
         </div>
     );
-}
+};
 
 export default CostDate;
