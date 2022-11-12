@@ -1,11 +1,12 @@
 //import React from 'react';
+import NewCost from './components/NewCost/NewCost';
 import Costs from './components/Costs/Costs';
 
 const App = () => {
     const costs = [
         {
             date: new Date(2021, 2, 12),
-            description: 'Холодильник',
+            description: 'Fridge',
             amount: 999.99,
         },
         {
@@ -30,7 +31,7 @@ const App = () => {
 
     return (
         <div>
-            <h1>App</h1>
+            <NewCost />
             <Costs costs={costs} />
         </div>
     );
